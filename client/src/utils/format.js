@@ -1,7 +1,7 @@
 // Formatting helpers so money and dates look the same everywhere.
 
-const thb = new Intl.NumberFormat("en-US", { style: "currency", currency: "THB", minimumFractionDigits: 2, maximumFractionDigits: 2 });
-const thbShort = new Intl.NumberFormat("en-US", { style: "currency", currency: "THB", notation: "compact", maximumFractionDigits: 1 });
+const thb = new Intl.NumberFormat("en-US", { style: "currency", currency: "THB", currencyDisplay: "narrowSymbol", minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const thbShort = new Intl.NumberFormat("en-US", { style: "currency", currency: "THB", currencyDisplay: "narrowSymbol", notation: "compact", maximumFractionDigits: 1 });
 const num = new Intl.NumberFormat("en-US");
 
 export const money = n => thb.format(n ?? 0);            // ฿12,345.00
